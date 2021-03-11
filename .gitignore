@@ -1,3 +1,4 @@
 # Executable Files
 *.out
 *.exe
+.vscode/

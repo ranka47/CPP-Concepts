@@ -22,6 +22,8 @@ public:
 		cout<<"I am without argument"<<endl;
 		return t;
 	}
+	void reset() { r = 0.0; i = 0.0; }
+
 	void display()
 	{
 		cout << r <<" "<< i << " " << endl;
@@ -30,12 +32,23 @@ public:
 int main()
 {
 	complex c1,c2,c3;
-	// c1.display();
+	cout << "Without argument increment operator\n";
+	c1.display();
 	c2 = ++c1;
+	c2.display();
 	c3 = c1.operator ++ ();
+	c3.display();
+
+	c1.reset();
+	c2.reset();
+	c3.reset();
+
+	cout << "\nWith argument increment operator\n";
+	c1.display();
 	c3 = c1++;
+	c1.display();
 	c2 = c1.operator ++ (2);
-	// c2.display();
-	// c3.display();
+	c2.display();
+	c3.display();
 	return 0;
 }

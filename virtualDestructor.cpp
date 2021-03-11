@@ -57,7 +57,7 @@ int main()
 	// deallocating and checking the sequence of DTOR's when pointer is UPCASTED
 	delete bPtr;
 	cout<<"Ends Here!"<<endl;
-	// You will observer that the derived class DTOR is not called in this UPCASTED case.
-	// To solve the problem check out the virtualDestructor.cpp
+	// You will observer that the derived class DTOR is called in this UPCASTED case.
+	// This solves the problem faced in upcasting.cpp
 	return 0;
 }
